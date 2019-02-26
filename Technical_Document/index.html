@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>React Technical Document</title>
+  <link rel="stylesheet" type="text/css" href="./css/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<body>
+  <div class='row'>
+    <div class='col-sm-3'>
+      <nav id=nav-bar col=''>
+        <header>React.JS Documentation</header>
+        <ul>
+          <li><a class='nav-link' href='#intro'>Introduction</a></li>
+          <li><a class='nav-link' href='#prior_knowledge_needed'>What prior knowledge is needed</a></li>
+          <li><a class='nav_link' href="#React_set_up">React and Babel</a></li>
+          <li><a class='nav-link' href='#JSX'>JSX</a></li>
+          <li><a class='nav_link' href="#React_node"></a>React Nodes</li>
+          <li><a class='nav-link' href='#React_components'>React Components</a></li>
+          <li><a class='nav-link' href="#Component_props">React Component Props</a></li>
+          <li><a class="nav_link" href="#Component_state">React Component State</a></li>
+          <li><a class='nav-link' href='#Single_way_data_flow'>Single-Way data flow</a></li>
+          <li><a class='nav-link' href='#Virtual_DOM'>Virtual Document Object Modal (DOM)</a></li>
+          <li><a class='nav-link' href='#Why_use_it'>Why React.JS</a></li>
+          <li><a class='nav-link' href='#applications'>Uses for React</a></li>
+          <li><a class='nav-link' href='#resources'>Resources</a></li>
+          <li><a class='nav-link' href='#references'>References</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class='col-sm-9'>
+      <main id='main-doc'>
+        <section class='main-section' id='intro'>
+            <header>Introduction</header>
+            <br>
+            <article >
+              <p>ReactJS, or simpllt Reacr is an open-source jaasscriopt Library that is used to build user interfaces for single page appplications. It used to handle the view layer for weba nd meobile applications, nad it allows for creating reusable user interfaces  components.
+              React was first developed by Jordan Walke, while he was working as a software engineer for Facebook.</p>
+              <p>React allows for developers to create large web applications that handle changes in data without reloading the webpage. The advantages of React allows it to fast, scalable, and simple</p>
+              <p>Important features of React that will get covered:</P>
+                <ul>
+                  <li>JSX</li>
+                  <li>React Nodes</li>
+                  <li>React Components</li>
+                  <li>React Component Props</li>
+                  <li>react Component State</li>
+                  <li>Single-Way data flow</li>
+                  <li>Virtual Document Object Modal (DOM)</li>
+                </ul>
+            </article>
+          </section>
+        <section class='main-section' id='prior_knowledge_needed'>
+          <header>What should be known before starting</header>
+          <br>
+          <article>
+            <p>This guide is to provide a general overview for how React works. React does require familiarity with HTML and JavScript</p>
+            <p>A few programming concepts that one should be familiar with are:</p>
+            <ul>
+              <li>Functions</li>
+              <li>Objects</li>
+              <li>Arrays</li>
+              <li>Classes</li>
+            </ul>
+            <p>While it is not required, it recommended to be familiar with ES6 concepts such the following:</p>
+            <ul>
+              <li>Arrow functions</li>
+              <li>Classes</li>
+              <li>Let statements</li>
+              <li>Const statements</li>
+            </ul>
+
+          </article>
+        </section>
+        <section class='main-section' id='JSX'>
+          <header>JSX</header>
+          <br>
+          <article>
+            <p>JSX  is an XMK/HTML-like syntax that is used by React that allows for HTML-like strtuctures
+              ( e.g DOM like tree strctures) to be written as JavaScript. A transpiler like Babel will turn these expressions into actual JavaScript code. This allows for putting HTML into JavaScript</p>
+              <p>Here is an example of JSX:</p>
+              <code>
+              </code>
+              <p>JSX allows for a concise syntax for defining a tree structure with attributes that does not require a new language. JSX is easier to read over larger pyramids of Javscript function calls or object literals and help with defining user interfaces.</p>
+          </article>
+        </section>
+        <section class='main-section' id='React_nodes'>
+          <header>React Nodes</header>
+          <br>
+          <article>
+            <p>A React can be simply described as a light, stateless, immutable, virtual representation of a DOM node</p>
+
+            <p>These React Nodes are not real DOM nodes, such as text or elemnt nodes, but are representations of a potential DOM node. This representation is considerd the virtual DOM.
+               React can define a virtual DOM with React nodes that can eventually be used to create a real DOM structure, like with React Native. React Node can be created using both javascript or JSX</p>
+            <p>To create a React Node using JavaScript, simpliy use the <code>React.createElement(type,props,children)</code> function</p>
+            <p>The <code>React.createElement()</code> arguments can be explained as follows:</p>
+            <ul>
+              <li><strong>type(string| <code>React.createClass()</code>):</strong> can be either a string that represents an HTML element of a React component instance (i.e, instance of <code>React.createClass()</code>)</li>
+              <li><strong>props(null| object):</strong> can be <code>null</code> or an object containing attributes/props and values</li>
+              <li><strong>children (null|string| <code>React.createClass()</code>|<code>React.createElement()</code>):</strong> can be <code>null</code>, a string to be turned into a text node, or an instance of either <code>React.createClass()</code> or <code>React.createElement()</code></li>
+            </ul>
+          </article>
+        </section>
+        <section class='main-section' id='React_components'>
+          <header>React Components</header>
+          <br>
+          <article>
+            <p>A React Component is any part of the User Interface that can contain React nodes, either
+               through a <code>React.createElement()</code> or JSX.</p>
+
+            <p></p>
+          </article>
+        </section>
+        <section class='main-section' id='Component_props'>
+          <header>React Components Props</header>
+          <br>
+          <article>
+            <p></p>
+            <code></code>
+            <p></p>
+          </article>
+        </section>
+        <section class='main-section' id='Component_state'>
+          <header>React Components State</header>
+          <br>
+          <article>
+            <p></p>
+            <code></code>
+            <p></p>
+          </article>
+        </section>
+        <section class='main-section' id='Single_way_data_flow'></section>
+        <section class='main-section' id='Virtual_DOM'></section>
+        <section class='main-section' id='Why_use_it'></section>
+        <section class='main-section' id='applications'></section>
+        <section class='main-section' id='resources'></section>
+        <footer></footer>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
