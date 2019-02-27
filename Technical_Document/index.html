@@ -16,9 +16,8 @@
         <ul>
           <li><a class='nav-link' href='#intro'>Introduction</a></li>
           <li><a class='nav-link' href='#prior_knowledge_needed'>What prior knowledge is needed</a></li>
-          <li><a class='nav_link' href="#React_set_up">React and Babel</a></li>
           <li><a class='nav-link' href='#JSX'>JSX</a></li>
-          <li><a class='nav_link' href="#React_node"></a>React Nodes</li>
+          <li><a class='nav_link' href="#React_node">React nodes</a></li>
           <li><a class='nav-link' href='#React_components'>React Components</a></li>
           <li><a class='nav-link' href="#Component_props">React Component Props</a></li>
           <li><a class="nav_link" href="#Component_state">React Component State</a></li>
@@ -78,7 +77,7 @@
           <header>JSX</header>
           <br>
           <article>
-            <p>JSX  is an XMK/HTML-like syntax that is used by React that allows for HTML-like strtuctures
+            <p>JSX  is an XML/HTML-like syntax that is used by React that allows for HTML-like strtuctures
               ( e.g DOM like tree strctures) to be written as JavaScript. A transpiler like Babel will turn these expressions into actual JavaScript code. This allows for putting HTML into JavaScript</p>
               <p>Here is an example of JSX:</p>
               <code>
@@ -109,33 +108,116 @@
           <article>
             <p>A React Component is any part of the User Interface that can contain React nodes, either
                through a <code>React.createElement()</code> or JSX.</p>
-
-            <p></p>
+            <p> React components are the programmic abstraction (e.g User interfaces, state changes, DOM Changes). A good example is where a lot of applications user interfaces have a
+            layout component as a top componet. Then this components will have further sub-components, like a search bar or menu list. These subcomponets can be further broken down into subcomponents.</p>
           </article>
         </section>
         <section class='main-section' id='Component_props'>
           <header>React Components Props</header>
           <br>
           <article>
-            <p></p>
-            <code></code>
-            <p></p>
+            <p>Component props provide configuration values for a component and they function similarly to HTML attributes. These can be also thought of as the configuration values that are sent to a component</p>
+            <p> every react component instance property called <code>props</code> that beings as an empty JavaScript object. This empty object can be later filled by a parent component. The value(s) can by used by that component or passed on to child components.</p>
           </article>
         </section>
         <section class='main-section' id='Component_state'>
           <header>React Components State</header>
           <br>
           <article>
-            <p></p>
+            <p>In short component states are used to store information about the component that can change over time. These changes can  come as a result of user or system events, such as a response to user input, a server request or time lapse.</p>
             <code></code>
-            <p></p>
+            <p>According to React documentation a state should:
+              <blockquote>Contain data that a component's event handlers may change to trigger a UI update</blockquote>
+            </p>
+            <p>A few thing to remember about Raeact component states:</p>
+            <ol>
+              <li>A component with a default state should be provided with <code>getInitialState()</code></li>
+              <li>States changes are usually how to start the re-rendering of a component and all subcomponents</li>
+              <li>To make a state change of a component use <code>this.setState()</code></li>
+              <li>State changes merges new data with old that is alreadty in the state</li>
+              <li>You shouls never have to call <code>this.render()</code> directly when doing a state change</li>
+              <li>State objects shoule contain only relevent data for the User Interface</li>
+            </ol>
+            <br>
+            <p><strong>Similiarities of React components states and props.</strong></p>
+            <p>Similiarities:</p>
+            <ol>
+              <li>Javascript objects</li>
+              <li>hae default values</li>
+              <li>Both can be accessed via <code>this.props</code> or <code>this.state</code></li>
+            </ol>
+            <p>(Some)Differences:</p>
+            <ol>
+              <li>Props are passes into a component from either a parent compoent or the starting scope of React rendering.</li>
+              <li>Props are intended as configuration values passed into the component, like agruments into a function</li>
+              <li>State is a serializable representation of data that is typically tied to the user Interface</li>
+              <li>State components can only be mutated by the component that contains that state.</li>
+            </ol>
+            <p><strong>Note:</strong> State should be avoided if possible, since stateful components add complexity to an application in how data is handle with various sub-components.</p>
           </article>
         </section>
-        <section class='main-section' id='Single_way_data_flow'></section>
-        <section class='main-section' id='Virtual_DOM'></section>
-        <section class='main-section' id='Why_use_it'></section>
-        <section class='main-section' id='applications'></section>
-        <section class='main-section' id='resources'></section>
+        <section class='main-section' id='Unidirectional_data_flow'>
+          <header>Unidirectional data flow in React</header>
+          <br>
+          <p>When designing a React app you can nest child components into higher-order parent components. The parent component(s) will have the state component for your app. The parent component will typcially pass down a snpshot of it state to a child component through props and the child
+          component will communicate with the parent to update the sate via callbacks.</p>
+          <p>The parent compoent is responsible for storing the state of an app and then passes it to the child component where a function is passes a function and brings the result back to the parent component. The img below provides a decent representation of what happens.</p>
+
+          <img src='./css/image004.jpg' alt='Representation of Unidirectional data flow'>
+        </section>
+        <section class='main-section' id='Virtual_DOM'>
+          <header>Virtual Document Object Model (DOM)</header>
+          <br>
+          <article>
+            <p>Another feature of React is that is create an in-memory data strucutre cache which computes changes and updates made to the browser. This allows for developers to take notice of changes to the web page as the actual changes occur.</p>
+          </article>
+        </section>
+        <section class='main-section' id='Why_use_it'>
+          <header>Why React?</header>
+          <br>
+          <p>reasons to learn React:</p>
+          <ul>
+            <li><strong>In demand:</strong> according to recent surveys conducted with software engineers, over 33% said that React skills were needed.</li>
+            <li><strong>Simplicity:</strong> easy to grasp with it component-based approached, well-defined lifecycle, and use of plain javascript.</li>
+            <li><strong>Easy to learn:</strong> only requires basic knowledge of CSS, HTML, and Javascript</li>
+            <li><strong>Native Approach:</strong> can be used to create mobile application.</li>
+            <li><strong>Data Binding:</strong>React uses onw-way data binding, which can make it easier to debug self-contained components of larger React Apps</li>
+            <li><strong>Performance:</strong></li>
+            <li><strong>Testability:</strong>React applications are easy to test. The unidirectional data flow makes it easier to test react applications.</li>
+          </ul>
+        </section>
+        <section class='main-section' id='applications'>
+          <header>Applications of React</header>
+          <br>
+          <p>Here are some examples of websites built with React:</p>
+          <ul>
+            <li><a href="https://www.airbnb.com/">Airbnb</a></li>
+            <li><a href="https://www.dropbox.com/?landing=dbv2">Dropbox</a></li>
+            <li><a href="https://www.facebook.com">Facebook</a></li>
+            <li><a href="https://www.reddit.com/">Reddit</a></li>
+          </ul>
+        </section>
+        <section class='main-section' id='resources'>
+          <header>Resources for further reading</header>
+          <br>
+          <p>Here are additional resources to learn more about React</p>
+          <ul>
+            <li><a href="https://reactjs.org/docs/getting-started.html">React documentation</a></li>
+            <li><a href="https://legacy.gitbook.com/book/frontendmasters/react-enlightenment/details">React Enlightenment</a></li>
+            <li><a href="https://www.w3schools.com/whatis/whatis_react.asp">React W3Schools</a></li>
+            <li><a href="https://tylermcginnis.com/reactjs-tutorial-a-comprehensive-guide-to-building-apps-with-react/">React Tutorial by Tyler McGinnis</a></li>
+            <li><a href=""></a></li>
+          </ul>
+        </section>
+        <section class='main-section' id='references'>
+          <header>References</header>
+          <ul>
+            <li>https://legacy.gitbook.com/book/frontendmasters/react-enlightenment/details</li>
+            <li>https://www.c-sharpcorner.com/article/what-and-why-reactjs/</li>
+            <li>https://medium.com/@lizdenhup/understanding-unidirectional-data-flow-in-react-3e3524c09d8e</li>
+            <li>https://www.tutorialspoint.com/reactjs/reactjs_events.htm</li>
+          </ul>
+        </section>
         <footer></footer>
       </main>
     </div>
