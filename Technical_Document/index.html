@@ -11,29 +11,29 @@
 <body>
   <div class='row'>
     <div class='col-sm-3'>
-      <nav id='nav-bar'>
+      <nav id='navbar'>
         <header>React.JS Documentation</header>
         <ul class='nav'>
-          <li><a class='nav-link' href='#intro'>Introduction</a></li>
-          <li><a class='nav-link' href='#prior_knowledge_needed'>What prior knowledge is needed</a></li>
+          <li><a class='nav-link' href='#Introduction'>Introduction</a></li>
+          <li><a class='nav-link' href='#prior_knowledge_needed'>prior knowledge needed</a></li>
           <li><a class='nav-link' href='#JSX'>JSX</a></li>
-          <li><a class='nav-link' href="#React_node">React nodes</a></li>
-          <li><a class='nav-link' href='#React_components'>React Components</a></li>
-          <li><a class='nav-link' href="#Component_props">React Component Props</a></li>
-          <li><a class="nav-link" href="#Component_state">React Component State</a></li>
-          <li><a class='nav-link' href='#Single_way_data_flow'>Single-Way data flow</a></li>
-          <li><a class='nav-link' href='#Virtual_DOM'>Virtual Document Object Modal (DOM)</a></li>
-          <li><a class='nav-link' href='#Why_use_it'>Why React.JS</a></li>
-          <li><a class='nav-link' href='#applications'>Uses for React</a></li>
-          <li><a class='nav-link' href='#resources'>Resources</a></li>
-          <li><a class='nav-link' href='#references'>References</a></li>
+          <li><a class='nav-link' href="#React_Nodes">React Nodes</a></li>
+          <li><a class='nav-link' href='#React_Components'>React Components</a></li>
+          <li><a class='nav-link' href="#Component_Props">Component Props</a></li>
+          <li><a class="nav-link" href="#Component_State">Component State</a></li>
+          <li><a class='nav-link' href='#Single_way_data_flow'>Single way data flow</a></li>
+          <li><a class='nav-link' href='#Virtual_DOM'>Virtual DOM</a></li>
+          <li><a class='nav-link' href='#Why_use_it'>Why use it</a></li>
+          <li><a class='nav-link' href='#Applications'>Applications</a></li>
+          <li><a class='nav-link' href='#Resources'>Resources</a></li>
+          <li><a class='nav-link' href='#References'>References</a></li>
         </ul>
       </nav>
     </div>
     <div class='col-sm-9'>
       <main id='main-doc'>
-        <section class='main-section' id='intro'>
-            <header>Introduction</header>
+        <section class='main-section' id='Introduction'>
+            <header >Introduction</header>
             <br>
             <article >
               <p>ReactJS, or simpllt Reacr is an open-source jaasscriopt Library that is used to build user interfaces for single page appplications. It used to handle the view layer for weba nd meobile applications, nad it allows for creating reusable user interfaces  components.
@@ -52,7 +52,7 @@
             </article>
           </section>
         <section class='main-section' id='prior_knowledge_needed'>
-          <header>What should be known before starting</header>
+          <header >prior knowledge needed</header>
           <br>
           <article>
             <p>This guide is to provide a general overview for how React works. React does require familiarity with HTML and JavScript</p>
@@ -74,7 +74,7 @@
           </article>
         </section>
         <section class='main-section' id='JSX'>
-          <header>JSX</header>
+          <header >JSX</header>
           <br>
           <article>
             <p>JSX  is an XML/HTML-like syntax that is used by React that allows for HTML-like strtuctures
@@ -85,8 +85,8 @@
               <p>JSX allows for a concise syntax for defining a tree structure with attributes that does not require a new language. JSX is easier to read over larger pyramids of Javscript function calls or object literals and help with defining user interfaces.</p>
           </article>
         </section>
-        <section class='main-section' id='React_nodes'>
-          <header>React Nodes</header>
+        <section class='main-section' id='React_Nodes'>
+          <header >React Nodes</header>
           <br>
           <article>
             <p>A React can be simply described as a light, stateless, immutable, virtual representation of a DOM node</p>
@@ -102,8 +102,8 @@
             </ul>
           </article>
         </section>
-        <section class='main-section' id='React_components'>
-          <header>React Components</header>
+        <section class='main-section' id='React_Components'>
+          <header >React Components</header>
           <br>
           <article>
             <p>A React Component is any part of the User Interface that can contain React nodes, either
@@ -112,16 +112,16 @@
             layout component as a top componet. Then this components will have further sub-components, like a search bar or menu list. These subcomponets can be further broken down into subcomponents.</p>
           </article>
         </section>
-        <section class='main-section' id='Component_props'>
-          <header>React Components Props</header>
+        <section class='main-section' id='Component_Props'>
+          <header >Component Props</header>
           <br>
           <article>
             <p>Component props provide configuration values for a component and they function similarly to HTML attributes. These can be also thought of as the configuration values that are sent to a component</p>
             <p> every react component instance property called <code>props</code> that beings as an empty JavaScript object. This empty object can be later filled by a parent component. The value(s) can by used by that component or passed on to child components.</p>
           </article>
         </section>
-        <section class='main-section' id='Component_state'>
-          <header>React Components State</header>
+        <section class='main-section' id='Component_State'>
+          <header >Component State</header>
           <br>
           <article>
             <p>In short component states are used to store information about the component that can change over time. These changes can  come as a result of user or system events, such as a response to user input, a server request or time lapse.</p>
@@ -155,8 +155,8 @@
             <p><strong>Note:</strong> State should be avoided if possible, since stateful components add complexity to an application in how data is handle with various sub-components.</p>
           </article>
         </section>
-        <section class='main-section' id='Unidirectional_data_flow'>
-          <header>Unidirectional data flow in React</header>
+        <section class='main-section' id='Single_way_data_flow'>
+          <header >Single way data flow</header>
           <br>
           <p>When designing a React app you can nest child components into higher-order parent components. The parent component(s) will have the state component for your app. The parent component will typcially pass down a snpshot of it state to a child component through props and the child
           component will communicate with the parent to update the sate via callbacks.</p>
@@ -165,14 +165,14 @@
           <img src='./css/image004.jpg' alt='Representation of Unidirectional data flow'>
         </section>
         <section class='main-section' id='Virtual_DOM'>
-          <header>Virtual Document Object Model (DOM)</header>
+          <header >Virtual DOM</header>
           <br>
           <article>
             <p>Another feature of React is that is create an in-memory data strucutre cache which computes changes and updates made to the browser. This allows for developers to take notice of changes to the web page as the actual changes occur.</p>
           </article>
         </section>
         <section class='main-section' id='Why_use_it'>
-          <header>Why React?</header>
+          <header >Why use it</header>
           <br>
           <p>reasons to learn React:</p>
           <ul>
@@ -185,8 +185,8 @@
             <li><strong>Testability:</strong>React applications are easy to test. The unidirectional data flow makes it easier to test react applications.</li>
           </ul>
         </section>
-        <section class='main-section' id='applications'>
-          <header>Applications of React</header>
+        <section class='main-section' id='Applications'>
+          <header >Applications</header>
           <br>
           <p>Here are some examples of websites built with React:</p>
           <ul>
@@ -196,8 +196,8 @@
             <li><a href="https://www.reddit.com/">Reddit</a></li>
           </ul>
         </section>
-        <section class='main-section' id='resources'>
-          <header>Resources for further reading</header>
+        <section class='main-section' id='Resources'>
+          <header >Resources</header>
           <br>
           <p>Here are additional resources to learn more about React</p>
           <ul>
@@ -207,8 +207,8 @@
             <li><a href="https://tylermcginnis.com/reactjs-tutorial-a-comprehensive-guide-to-building-apps-with-react/">React Tutorial by Tyler McGinnis</a></li>
           </ul>
         </section>
-        <section class='main-section' id='references'>
-          <header>References</header>
+        <section class='main-section' id='References'>
+          <header >References</header>
           <ul>
             <li>https://legacy.gitbook.com/book/frontendmasters/react-enlightenment/details</li>
             <li>https://www.c-sharpcorner.com/article/what-and-why-reactjs/</li>
@@ -216,7 +216,9 @@
             <li>https://www.tutorialspoint.com/reactjs/reactjs_events.htm</li>
           </ul>
         </section>
-        <footer></footer>
+        <footer>
+          &copy; Create by Daniel shelnut
+        </footer>
       </main>
     </div>
   </div>
